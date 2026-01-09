@@ -3,4 +3,7 @@ import json
 with open('config.json') as f:
     config = json.load(f)
 
-print(f"Running in {config['mode']} mode")
+if config['mode'] == 'production':
+    print("Production mode activated!")
+else:
+    print("Development mode activated!")
